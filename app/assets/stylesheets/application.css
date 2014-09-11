@@ -16,3 +16,7 @@
 
  @import "bootstap-sprockets";
  @import "bootstrap";
+
+#tweetsubmit {
+  float : right;
+}
