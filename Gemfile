@@ -13,6 +13,7 @@ gem 'autoprefixer-rails'
 gem 'factory_girl'
 gem "factory_girl_rails", "~> 4.0"
 gem 'bcrypt-ruby'
+gem 'pry'
 
 group :development do
   gem 'better_errors'

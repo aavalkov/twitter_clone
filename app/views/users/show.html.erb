@@ -2,6 +2,8 @@
 
 <h2><%= @user.username %></h2>
 
+<%= link_to "Follow", user_follows_path(@user.id), method: "post",  class: "btn btn-primary btn-sm" %>
+
 <% @user.tweets.each do |tweet| %>
   <p><%= tweet.tweet %></p>
 <% end %>
