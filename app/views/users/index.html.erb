@@ -7,7 +7,8 @@
     <h3>Tweet Deck:</h3>
     <% current_user.f_tweets.each do |tweet| %>
       <% tweeter = '@' + User.find(tweet.user_id).username%>
-      <p><%= tweet.tweet%><%=link_to tweeter, user_path(tweet.user_id)%></p>
+      <h5><%=link_to tweeter, user_path(tweet.user_id)%></h5>
+      <p><%= tweet.tweet%> </p>
     <% end %>
     <br>
   </div>
