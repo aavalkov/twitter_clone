@@ -12,4 +12,10 @@ class UserMailer < ActionMailer::Base
     @tweeter = tweeter
     mail to: user.email, subject: "You were mentioned"
   end
+
+  def following(user, follower)
+    @user = user
+    @follower = follower
+    mail to: user.email, subject: "You have a new Follower"
+  end
 end

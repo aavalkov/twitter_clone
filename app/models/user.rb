@@ -8,10 +8,6 @@ class User < ActiveRecord::Base
   has_many :followed_users, :through => :follows
   has_many :f_tweets, :through => :followed_users, :source => :tweets
 
-  # def sort_by_date(collection)
-  #   collection.sort_by( { |order|}).reverse
-  # end
-
   def followers
     array = []
     Follow.all.each do |follow|
@@ -21,27 +17,5 @@ class User < ActiveRecord::Base
     end
     array.count
   end
-
-  def all_followers_tweets
-    tweets = []
-    self.follows.each do |person|
-      user = User.find(person.followed_user_id)
-      user.tweets.each do |tweet|
-        tweets << tweet
-      end
-    end
-    tweets
-  end
-
-
-
-    # <% current_user.follows.each do |tweet| %>
-
-    # <%followed_id = tweet.followed_user_id%>
-    # <% %>
-
-
-    # <% tweeter = '@' + User.find(tweet.user_id).username.capitalize%>
-    # <%=link_to tweeter, user_path(tweet.user_id)%>
 
 end
