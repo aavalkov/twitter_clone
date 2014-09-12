@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :followed_users, :through => :follows
   has_many :f_tweets, :through => :followed_users, :source => :tweets
 
+  # def sort_by_date(collection)
+  #   collection.sort_by( { |order|}).reverse
+  # end
+
   def followers
     array = []
     Follow.all.each do |follow|

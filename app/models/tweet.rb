@@ -2,6 +2,8 @@ class Tweet < ActiveRecord::Base
   validates_presence_of :tweet
   belongs_to :user
 
+  default_scope { order('created_at DESC') }
+
   after_create :check_for_mentions
 
   def check_for_mentions
