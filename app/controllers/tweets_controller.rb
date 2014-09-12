@@ -7,7 +7,10 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new(tweet_params)
     @tweet.user_id = current_user.id
     if @tweet.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to user_path(@tweet.user_id) }
+        format.js
+      end
     else
       render "new"
     end

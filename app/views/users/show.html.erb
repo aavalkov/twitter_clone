@@ -2,13 +2,20 @@
 <div class="col-md-2">
   <h2><%= '@'+@user.username %></h2>
 
+
   <%= link_to "Follow", user_follows_path(@user.id), method: "post",  class: "btn btn-primary btn-sm" %>
+  </br>
+  </br>
   <p>following: <%= @user.follows.count%></p>
   <p>followers: <%= @user.followers %> </p>
+
+  <% if current_user.id = @user.id %>
+    <%= render 'tweets/form' %>
+  <% end %>
 </div>
 
-<div class="col-md-4">
-  <% @user.tweets.each do |tweet| %>
-    <p><%= tweet.tweet %></p>
-  <% end %>
+<div class="col-md-4" id="own-tweets">
+
+    <%= render @user.tweets %>
+
 </div>

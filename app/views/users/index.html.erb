@@ -1,7 +1,10 @@
 <h1>Twitter</h1>
 
 <% if current_user %>
-  <%= render 'tweets/form' %>
+<div class ="row">
+  <div class="col-md-3">
+    <%= render 'tweets/form' %>
+  </div>
 
   <div class="col-md-6">
     <h3>Tweet Deck:</h3>
@@ -12,10 +15,10 @@
     <% end %>
     <br>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
       <form action="/" method="get" class="form-inline">
         <input name="search[query]" type="text" class="form-control" placeholder="search users">
-        <button class="btn btn-primary btn-sm">Enter</button>
+        <button class="btn btn-primary">Enter</button>
       </form>
 
     <% if !@results.nil? %>
@@ -26,6 +29,7 @@
     <% end %>
 
   </div>
+</div>
 <% else %>
   <%= render 'form'%>
 <% end %>

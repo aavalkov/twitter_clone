@@ -1,9 +1,9 @@
 <%#= render('layouts/errors', :object => @tweet) %>
 
-<%= form_for @tweet do |f| %>
-  <div class= "form-group col-md-2">
+<%= form_for @tweet, remote: true do |f| %>
+  <div class= "form-group">
     <%= f.label :tweet %>
-    <%= f.text_area :tweet, :maxlength => 140, :size => 40, class: "form-control" %>
+    <%= f.text_area :tweet, :maxlength => 140, :size => 40, class: "form-control", id: "tweetbox" %>
     <br>
     <span id="tweetsubmit">
     <%= f.submit("Tweet", :class => "btn btn-primary btn-sm") %>
