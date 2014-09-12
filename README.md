@@ -8,7 +8,7 @@ This app is a clone of twitter. Users can tweet, tweet at other users, follow us
 In your terminal, clone this repo:
 
 ```console
-$ clone https://github.com/aavalkov/animal_adoption_site.git
+$ clone https://github.com/aavalkov/twitter_clone.git
 ```
 
 Make sure you've installed [postgres](http://www.postgresql.org/download/) and have started the server:
