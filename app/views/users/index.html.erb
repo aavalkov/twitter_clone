@@ -12,6 +12,20 @@
     <% end %>
     <br>
   </div>
+  <div class="col-md-2">
+      <form action="/" method="get" class="form-inline">
+        <input name="search[query]" type="text" class="form-control" placeholder="search users">
+        <button class="btn btn-primary btn-sm">Enter</button>
+      </form>
+
+    <% if !@results.nil? %>
+      <h5>Results</h5>
+      <% @results.each do |result| %>
+        <p><%= link_to "@"+result.username, user_path(result.id)%></p>
+      <% end %>
+    <% end %>
+
+  </div>
 <% else %>
   <%= render 'form'%>
 <% end %>

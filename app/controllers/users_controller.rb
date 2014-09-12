@@ -2,6 +2,11 @@ class UsersController < ApplicationController
   def index
     @user = User.new
     @tweet = Tweet.new
+
+    if params[:search]
+      search = params[:search]
+      @results = User.basic_search(search[:query])
+    end
   end
 
   def new
