@@ -6,4 +6,14 @@ class User < ActiveRecord::Base
   has_many :tweets
   has_many :follows
 
+  def followers
+    array = []
+    Follow.all.each do |follow|
+      if self.id == follow.followed_user_id
+        array << follow
+      end
+    end
+      array.count
+  end
+
 end
