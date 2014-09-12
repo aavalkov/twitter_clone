@@ -2,7 +2,7 @@
 This app is a clone of twitter. Users can tweet, tweet at other users, follow users, and search for users.
 
 ##Authors
-[Anna Valkov](http://github.com/aavalkov.com) [Keebz](http://github.com/keebz.com)
+[Anna Valkov](http://github.com/aavalkov) and [Keebz](http://github.com/keebz)
 
 ##Setup
 In your terminal, clone this repo:
