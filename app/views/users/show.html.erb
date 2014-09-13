@@ -1,17 +1,19 @@
 <h1>Twitter</h1>
-<div class="col-md-2">
+<div class="col-md-3">
   <h2><%= '@'+@user.username %></h2>
 
 
-  <%= link_to "Follow", user_follows_path(@user.id), method: "post",  class: "btn btn-primary btn-sm" %>
+  <%= link_to "Follow", user_follows_path(@user.id), method: "post",  class: "btn btn-primary btn-sm"  %>
   </br>
   </br>
   <p>following: <%= @user.follows.count%></p>
-  <p>followers: <%= @user.followers %> </p>
+  <div>followers: <%= @user.followers %> </div>
 
   <% if current_user.id = @user.id %>
     <%= render 'tweets/form' %>
   <% end %>
+</div>
+<div class="col-md-1">
 </div>
 
 <div class="col-md-4" id="own-tweets">

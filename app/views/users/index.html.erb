@@ -9,9 +9,11 @@
   <div class="col-md-6">
     <h3>Tweet Deck:</h3>
     <% current_user.f_tweets.each do |tweet| %>
+    <div class="tweet-boarder">
       <% tweeter = '@' + User.find(tweet.user_id).username%>
       <h5><%=link_to tweeter, user_path(tweet.user_id)%></h5>
       <p><%= tweet.tweet%> </p>
+    </div>
     <% end %>
     <br>
   </div>

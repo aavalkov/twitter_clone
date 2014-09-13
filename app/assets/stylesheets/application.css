@@ -20,3 +20,10 @@
 #tweetsubmit {
   float : right;
 }
+
+.tweet-boarder {
+	width: 300px;
+  padding: 7px;
+  border: 1px solid gray;
+  margin: 7px;
+}
