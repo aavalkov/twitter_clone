@@ -1,4 +1,5 @@
 <div class ="tweet-boarder">
-	<p><strong>@<%= User.find(tweet.user_id).username %></strong></p>
+  <% tweeter = '@' + User.find(tweet.user_id).username%>
+  <h5><%=link_to tweeter, user_path(tweet.user_id)%></h5>
 	<p><%= tweet.tweet %></p>
 </div>

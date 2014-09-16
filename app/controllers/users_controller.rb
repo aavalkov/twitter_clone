@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     if @user.save
       UserMailer.signup_confirmation(@user).deliver
       session[:user_id] = @user.id
+      Follow.create({user_id: current_user.id, followed_user_id: current_user.id})
       redirect_to root_path
     else
       render 'new'

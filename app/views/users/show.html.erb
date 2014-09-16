@@ -1,5 +1,6 @@
-<h1>Twitter</h1>
-<div class="col-md-3">
+<h1 class="logo" >Twitter</h1>
+<div class="col-md-3 columns">
+  <img id="egg" src="http://data3.whicdn.com/images/69351265/large.jpg">
   <h2><%= '@'+@user.username %></h2>
 
 
@@ -8,14 +9,15 @@
   </br>
   <p>following: <%= @user.follows.count%></p>
   <div>followers: <%= @user.followers %> </div>
+  </br>
 
-  <% if current_user.id = @user.id %>
+  <% if current_user.id == @user.id %>
     <%= render 'tweets/form' %>
   <% end %>
 </div>
-<div class="col-md-1">
-</div>
-
-<div class="col-md-4" id="own-tweets">
-  <%= render @user.tweets %>
+<div class="col-md-6 columns">
+  <h3>Your tweets</h3>
+  <div id="own-tweets">
+    <%= render @user.tweets %>
+  </div>
 </div>

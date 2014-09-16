@@ -22,8 +22,36 @@
 }
 
 .tweet-boarder {
-	width: 300px;
+	width: auto;
   padding: 7px;
-  border: 1px solid gray;
+  border-radius: 5px;
+  border: 1px solid #BFBFBF;
   margin: 7px;
 }
+
+body {
+  background-color: #6BBFFF;
+}
+
+.columns {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-right: 1%;
+  border-radius: 5px;
+  background-color: #FFFEFE;
+  }
+
+.logo {
+  color: #FFFEFE;
+ }
+
+ #egg {
+  width: auto;
+  height: 150px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+
+ }
