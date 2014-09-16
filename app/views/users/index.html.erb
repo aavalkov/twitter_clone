@@ -15,9 +15,10 @@
           <% tweeter = '@' + User.find(tweet.user_id).username%>
           <h5><%=link_to tweeter, user_path(tweet.user_id)%></h5>
           <p><%= tweet.tweet%></p>
+          <% if tweet.user_id == current_user.id %>
 
           <%= link_to image_tag("http://blogs.plos.org/neurotribes/files/2011/11/trashcan.jpg", id: "trash"), tweet_path(tweet.id), method: 'DELETE'  %>
-
+          <%end%>
 
         </div>
         <% end %>

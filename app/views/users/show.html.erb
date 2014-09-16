@@ -15,9 +15,23 @@
     <%= render 'tweets/form' %>
   <% end %>
 </div>
-<div class="col-md-6 columns">
+<div class="col-md-5 columns">
   <h3>Your tweets</h3>
   <div id="own-tweets">
     <%= render @user.tweets %>
   </div>
+</div>
+
+<div class="col-md-3 columns">
+  <form action="/" method="get" class="form-group">
+    <input name="search[query]" type="text" class="form-control" placeholder="search users"><br>
+    <button class="btn btn-primary">search</button>
+  </form>
+
+  <% if !@results.nil? %>
+    <h5>Results</h5>
+    <% @results.each do |result| %>
+      <p><%= link_to "@"+result.username, user_path(result.id)%></p>
+    <% end %>
+  <% end %>
 </div>
