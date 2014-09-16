@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     array.count
   end
 
-  def self.find_by_serch(query)
+  def self.find_by_search(query)
     result = User.basic_search(query)
   end
 

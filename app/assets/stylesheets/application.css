@@ -27,6 +27,7 @@
   border-radius: 5px;
   border: 1px solid #BFBFBF;
   margin: 7px;
+  padding-bottom:20px;
 }
 
 body {
@@ -43,6 +44,7 @@ body {
 
 .logo {
   color: #FFFEFE;
+  padding-bottom: 2%;
  }
 
  #egg {
@@ -54,4 +56,10 @@ body {
   margin-right: auto;
   padding-bottom: 5px;
 
+ }
+ #trash {
+  width: auto;
+  height: 15px;
+  clear:both;
+  float: right;
  }

@@ -3,15 +3,10 @@
 
 <% if current_user %>
 <div class ="row">
-
     <div class="col-md-3 columns">
-
-        <img id="egg" src="http://data3.whicdn.com/images/69351265/large.jpg">
-
-        <%= render 'tweets/form' %>
+      <img id="egg" src="http://data3.whicdn.com/images/69351265/large.jpg">
+      <%= render 'tweets/form' %>
     </div>
-
-
     <div class="col-md-5 columns">
       <h3>Tweet Deck:</h3>
       <div id="tweet-deck">
@@ -19,14 +14,16 @@
         <div class="tweet-boarder">
           <% tweeter = '@' + User.find(tweet.user_id).username%>
           <h5><%=link_to tweeter, user_path(tweet.user_id)%></h5>
-          <p><%= tweet.tweet%> </p>
+          <p><%= tweet.tweet%></p>
+
+          <%= link_to image_tag("http://blogs.plos.org/neurotribes/files/2011/11/trashcan.jpg", id: "trash"), tweet_path(tweet.id), method: 'DELETE'  %>
+
+
         </div>
         <% end %>
       </div>
       <br>
     </div>
-
-
     <div class="col-md-3 columns">
         <form action="/" method="get" class="form-group">
           <input name="search[query]" type="text" class="form-control" placeholder="search users"><br>
