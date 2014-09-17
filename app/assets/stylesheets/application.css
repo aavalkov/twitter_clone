@@ -31,7 +31,7 @@
 }
 
 body {
-  background-color: #6BBFFF;
+  background-color: #3FCDFD;
 }
 
 .columns {
@@ -45,6 +45,9 @@ body {
 .logo {
   color: #FFFEFE;
   padding-bottom: 2%;
+  width: 250px;
+  height: auto;
+
  }
 
  #egg {

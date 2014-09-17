@@ -1,8 +1,9 @@
-<h1 class="logo" >Twitter</h1>
+<%= link_to image_tag("http://nyobetabeat.files.wordpress.com/2014/05/twitter-logo.png", class: "logo"), root_path%>
+
+<div class="row">
 <div class="col-md-3 columns">
   <img id="egg" src="http://data3.whicdn.com/images/69351265/large.jpg">
   <h2><%= '@'+@user.username %></h2>
-
 
   <%= link_to "Follow", user_follows_path(@user.id), method: "post",  class: "btn btn-primary btn-sm"  %>
   </br>
@@ -34,4 +35,5 @@
       <p><%= link_to "@"+result.username, user_path(result.id)%></p>
     <% end %>
   <% end %>
+</div>
 </div>

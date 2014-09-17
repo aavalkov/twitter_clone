@@ -1,10 +1,14 @@
-<h1 class="logo">Twitter</h1>
+<%= link_to image_tag("http://nyobetabeat.files.wordpress.com/2014/05/twitter-logo.png", class: "logo"), root_path%>
 
 
 <% if current_user %>
 <div class ="row">
     <div class="col-md-3 columns">
       <img id="egg" src="http://data3.whicdn.com/images/69351265/large.jpg">
+      <h2> @<%= current_user.username%> </h2>
+      <p>following: <%= current_user.follows.count%></p>
+      <div>followers: <%= current_user.followers %> </div>
+  </br>
       <%= render 'tweets/form' %>
     </div>
     <div class="col-md-5 columns">
